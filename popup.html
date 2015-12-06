@@ -1,0 +1,39 @@
+<html ng-app="oddyApp">
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="js/angular.min.js"></script>
+		<script src="js/oddyController.js"></script>
+		<style type="text/css">
+			html, body {
+				width:200px;
+				height: 100px;
+			}
+		</style>
+	</head>
+    <body ng-controller="OddyCtrl">
+	    <div class="container-fluid">
+		    <div class="row">
+		    <br/>
+		    	<div class="col-md-4">
+		    		<input class="form-control" ng-model="call" type="text" placeholder="TO CALL" autofocus/>
+		    	</div>
+		    	<br/>
+		    	<div class="col-md-4">
+		    		<input class="form-control" ng-model="pot" type="text" placeholder="POT"/>
+		    	</div>
+		    	<br/>
+		    	<div class="col-md-4">
+		    		<input class="form-control" ng-model="outs" type="text" placeholder="OUTS"/>
+		    	</div>
+		    </div>
+		    <div class="row"><br/>
+			    <div class="col-md-4">
+			    	<h4><b>needed:</b> {{percentNeeded()}} %</h4> 
+			    </div>
+			    <div class="col-md-4">
+			    	<h4><b>odds:</b> {{potOdds()}} %</h4> 
+			    </div>
+		    </div>
+	    </div>
+    </body>
+</html>
